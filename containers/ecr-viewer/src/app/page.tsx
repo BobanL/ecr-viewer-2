@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 
 import { Table } from "@trussworks/react-uswds";
 import { cookies } from "next/headers";
-import { env } from "next-runtime-env";
+import { notFound } from "next/navigation";
 
 import EcrPaginationWrapper from "./components/EcrPaginationWrapper";
 import EcrTableContent from "./components/EcrTableContent";
@@ -13,7 +13,6 @@ import Header from "./components/Header";
 import LibrarySearch from "./components/LibrarySearch";
 import { INITIAL_HEADERS } from "./constants";
 import { getAllConditions } from "./data/conditions";
-import NotFound from "./not-found";
 import { getTotalEcrCount } from "./services/listEcrDataService";
 import { returnParamDates } from "./utils/date-utils";
 import { PageSearchParams, getLibraryConfig } from "./utils/search-param-utils";
@@ -29,11 +28,8 @@ const HomePage = async ({
 }: {
   searchParams: PageSearchParams;
 }) => {
-  const isNonIntegratedViewer =
-    env("NEXT_PUBLIC_NON_INTEGRATED_VIEWER") === "true";
-
-  if (!isNonIntegratedViewer) {
-    return <NotFound />;
+  if (!process.env.METADATA_DATABASE_TYPE) {
+    notFound();
   }
 
   const cookieStore = cookies();

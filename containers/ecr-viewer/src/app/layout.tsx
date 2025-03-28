@@ -1,18 +1,11 @@
 import "@/styles/styles.scss";
-import { PublicEnvScript, env } from "next-runtime-env";
+
+import { AuthSessionProvider } from "./components/AuthSessionProvider";
 
 export const metadata = {
   title: "DIBBs eCR Viewer",
   description: "View your eCR data in an easy-to-understand format.",
 };
-
-const PATIENT_BANNER_BUFFER = "2.75rem";
-
-declare module "react" {
-  interface CSSProperties {
-    "--patient-banner-buffer"?: typeof PATIENT_BANNER_BUFFER | 0;
-  }
-}
 
 /**
  * `RootLayout` serves as the top-level layout component for a React application.
@@ -27,22 +20,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const isNonIntegratedViewer =
-    env("NEXT_PUBLIC_NON_INTEGRATED_VIEWER") === "true";
-
   return (
-    <html
-      lang="en"
-      style={{
-        "--patient-banner-buffer": isNonIntegratedViewer
-          ? PATIENT_BANNER_BUFFER
-          : 0,
-      }}
-    >
-      <head>
-        <PublicEnvScript nonce={{ headerKey: "x-nonce" }} />
-      </head>
-      <body className="overflow-x-auto">{children}</body>
+    <html lang="en">
+      <head />
+      <body className="overflow-x-auto">
+        <AuthSessionProvider>{children}</AuthSessionProvider>
+      </body>
     </html>
   );
 }
