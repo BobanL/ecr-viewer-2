@@ -21,7 +21,7 @@ autolabeler:
       - "/chore/i"
   - label: "docs"
     title:
-      - "/chore/i"
+      - "/docs/i"
   - label: "bug"
     title:
       - "/fix/i"
@@ -31,8 +31,6 @@ autolabeler:
   - label: "breaking"
     title:
       - "/.*!:/i"
-exclude-labels:
-  - "ignore-for-release"
 version-resolver:
   major:
     labels:
