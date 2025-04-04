@@ -15,6 +15,22 @@ categories:
       - "*"
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+autolabeler:
+  - label: "chore"
+    title:
+      - "/chore/i"
+  - label: "docs"
+    title:
+      - "/chore/i"
+  - label: "bug"
+    title:
+      - "/fix/i"
+  - label: "enhancement"
+    title:
+      - "/fix/i"
+  - label: "breaking"
+    title:
+      - "/.*!:/i"
 exclude-labels:
   - "ignore-for-release"
 version-resolver:
