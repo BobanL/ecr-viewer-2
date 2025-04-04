@@ -1,11 +1,14 @@
 changelog:
   categories:
+    - title: Breaking Changes 🛠
+      labels:
+        - breaking
     - title: 🏕 Features
       labels:
-        - "*"
-      exclude:
-        labels:
-          - dependencies
-    - title: 👒 Dependencies
+        - feature
+    - title: Fixes 🔧
       labels:
-        - dependencies
+        - fix
+    - title: Other Changes
+      labels:
+        - "*"
