@@ -24,3 +24,4 @@ of liability, arising out of or in connection with the possession, use or
 performance of this software.
 
 update doc
+fully deprecate something
