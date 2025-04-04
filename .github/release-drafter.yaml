@@ -25,9 +25,9 @@ autolabeler:
   - label: "bug"
     title:
       - "/fix/i"
-  - label: "enhancement"
+  - label: "feature"
     title:
-      - "/fix/i"
+      - "/feat/i"
   - label: "breaking"
     title:
       - "/.*!:/i"
