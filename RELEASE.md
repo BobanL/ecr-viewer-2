@@ -1,5 +1,7 @@
 # DIBBs Release Documentation
 
+chore
+
 ## Release Methodology: Semantic Versioning
 
 API documentation is published automatically with Sphinx and hosted via GitHub pages. DIBBs updates are released to the Github Container Registry (GCR) according to the guidelines set out in [Semantic Versioning 2.0.0](https://semver.org/) with each release's version following the pattern of MAJOR.MINOR.PATCH-BETA[#]. Beta versions will be follwed by BETA and a number. The following core tenets describe when each element of a release's version would be updated.
