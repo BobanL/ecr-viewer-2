@@ -38,7 +38,7 @@ autolabeler:
     title:
       - "/build/i"
 replacers:
-  - search: '/^(fix|chore|feat)(\(.*\))?(!)?:/i' # Replace any supported starting tag and scope with empty string
+  - search: '/^(fix|chore|feat)(\(.*\))?(!)?:/gi' # Replace any supported starting tag and scope with empty string
     replace: ""
 exclude-labels:
   - "docs"
