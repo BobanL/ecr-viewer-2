@@ -31,6 +31,9 @@ autolabeler:
   - label: "breaking"
     title:
       - "/.*!:/i"
+replacers:
+  - search: '^(fix|chore|build|feat|docs|refactor|perf)\(?.*\)?:' # Replace any supported starting tag and scope with empty string
+    replace: ""
 version-resolver:
   major:
     labels:
