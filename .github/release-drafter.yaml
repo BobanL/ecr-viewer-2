@@ -40,6 +40,8 @@ autolabeler:
 replacers:
   - search: '/^(fix|chore|feat)\(?.*\)?:/i' # Replace any supported starting tag and scope with empty string
     replace: ""
+  - search: "fix"
+    replace: ""
 exclude-labels:
   - "docs"
   - "ci"
