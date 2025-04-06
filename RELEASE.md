@@ -8,6 +8,7 @@ API documentation is published automatically with Sphinx and hosted via GitHub p
 
   A breaking change breaks backwards-compatibility with previous released versions. In other words, a breaking change is something that may cause a client's implementation to stop working when upgrading from a previous version. Common examples of breaking changes include:
 
+  - Delete everything
   - Deleting a package or public functions/methods
   - Deleting public function parameters
   - Changing a function name
