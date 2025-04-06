@@ -18,25 +18,25 @@ change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add
 autolabeler:
   - label: "fix"
     title:
-      - "/fix/(\(.*\)?:/i"
+      - '/fix/(\(.*\)?:/i'
   - label: "chore"
     title:
-      - "/chore(\(.*\)?:/i"
+      - '/chore(\(.*\)?:/i'
   - label: "docs"
     title:
-      - "/docs(\(.*\)?:/i"
+      - '/docs(\(.*\)?:/i'
   - label: "feature"
     title:
-      - "/feat(\(.*\))?:/i"
+      - '/feat(\(.*\))?:/i'
   - label: "breaking"
     title:
       - "/.*!:/i"
   - label: "ci"
     title:
-      - "/ci(\(.*\)?:/i"
+      - '/ci(\(.*\)?:/i'
   - label: "build"
     title:
-      - "/build(\(.*\)?:/i"
+      - '/build(\(.*\)?:/i'
 replacers:
   - search: '/(fix|chore|feat)(\(.*\))?(!)?:/gi' # Replace any supported starting tag and scope with empty string
     replace: ""
