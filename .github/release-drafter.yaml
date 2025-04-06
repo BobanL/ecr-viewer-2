@@ -27,7 +27,7 @@ autolabeler:
       - '/docs(\(.*\))?:/i'
   - label: "feature"
     title:
-      - '/feat(\(.*\)))?:/i'
+      - '/feat(\(.*\))?:/i'
   - label: "breaking"
     title:
       - "/.*!:/i"
