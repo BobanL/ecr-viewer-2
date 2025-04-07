@@ -16,27 +16,27 @@ categories:
 change-template: "- $TITLE (#$NUMBER)"
 change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
 autolabeler:
+  - label: "build"
+    title:
+      - '/build(\(.*\))?:/i'
+  - label: "ci"
+    title:
+      - '/ci(\(.*\))?:/i'
+  - label: "documentation"
+    title:
+      - '/docs(\(.*\))?:/i'
   - label: "fix"
     title:
       - '/fix/(\(.*\))?:/i'
   - label: "chore"
     title:
       - '/chore(\(.*\))?:/i'
-  - label: "documentation"
-    title:
-      - '/docs(\(.*\))?:/i'
   - label: "feature"
     title:
       - '/feat(\(.*\))?:/i'
   - label: "breaking"
     title:
       - "/.*!:/i"
-  - label: "ci"
-    title:
-      - '/ci(\(.*\))?:/i'
-  - label: "build"
-    title:
-      - '/build(\(.*\))?:/i'
 replacers:
   - search: '/(fix|chore|feat)(\(.*\))?(!)?:/gi' # Replace any supported starting tag and scope with empty string
     replace: ""
