@@ -27,7 +27,7 @@ autolabeler:
       - '/docs(\(.*\))?:/i'
   - label: "fix"
     title:
-      - '/fix/(\(.*\))?:/i'
+      - '/fix(\(.*\))?:/i'
   - label: "chore"
     title:
       - '/chore(\(.*\))?:/i'
