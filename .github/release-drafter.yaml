@@ -58,6 +58,4 @@ version-resolver:
   default: patch
 template: |
   <!-- Optional: add a release summary here -->
-  ## Changes
-
   $CHANGES
