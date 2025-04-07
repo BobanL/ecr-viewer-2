@@ -57,6 +57,7 @@ version-resolver:
       - "chore"
   default: patch
 template: |
+  <!-- Optional: add a release summary here -->
   ## Changes
 
   $CHANGES
