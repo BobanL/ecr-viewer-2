@@ -6,6 +6,8 @@ labels: Streamline eCR
 assignees: ""
 ---
 
+users can no longer use the app as expected 
+
 # Release Request
 
 _Any details about who this release is for, or when it needs to be completed._
