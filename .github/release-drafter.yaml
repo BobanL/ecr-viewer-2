@@ -22,7 +22,7 @@ autolabeler:
   - label: "chore"
     title:
       - '/chore(\(.*\))?:/i'
-  - label: "docs"
+  - label: "documentation"
     title:
       - '/docs(\(.*\))?:/i'
   - label: "feature"
